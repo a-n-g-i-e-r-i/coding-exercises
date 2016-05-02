@@ -2,18 +2,19 @@
 
 // Find the largest palindrome made from the product of two 3-digit numbers.
 
-package main 
+package main
 
 import (
     "fmt"
     "strconv"
+    "time"
 )
 
 func largest(n int) int {
   m := 0
   for i := n; i > 0; i-- {
     if m > i*i {
-      return m 
+      return m
     }
 
     for j := i; j > 0; j-- {
@@ -38,5 +39,10 @@ func isPalindrome(v int) bool {
 }
 
 func main() {
+  start := time.Now()
+
   fmt.Println(largest(999))
+
+  elapsed := time.Since(start)
+	fmt.Printf("Time elapsed: %s", elapsed)
 }

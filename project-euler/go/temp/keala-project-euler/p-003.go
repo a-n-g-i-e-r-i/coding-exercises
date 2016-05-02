@@ -7,6 +7,7 @@ package main
 import (
 	"fmt"
 	"math"
+	"time"
 )
 
 func largestPrime() int {
@@ -39,5 +40,10 @@ func isPrime(n int) bool {
 }
 
 func main() {
+	start := time.Now()
+
 	fmt.Println(largestPrime())
+
+	elapsed := time.Since(start)
+	fmt.Printf("Time elapsed: %s", elapsed)
 }

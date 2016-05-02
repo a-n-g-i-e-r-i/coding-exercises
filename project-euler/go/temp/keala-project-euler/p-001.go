@@ -6,6 +6,7 @@ package main
 
 import (
   "fmt"
+  "time"
 )
 
 func multiples() (s int) {
@@ -19,5 +20,10 @@ func multiples() (s int) {
 }
 
 func main() {
+  start := time.Now()
+
   fmt.Println(multiples())
+
+  elapsed := time.Since(start)
+  fmt.Printf("Time elapsed: %s", elapsed)
 }

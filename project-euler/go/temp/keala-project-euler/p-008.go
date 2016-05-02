@@ -7,6 +7,7 @@ package main
 import (
 	"fmt"
 	"strconv"
+	"time"
 )
 
 func greatestProd() int64 {
@@ -29,5 +30,10 @@ func greatestProd() int64 {
 }
 
 func main() {
+	start := time.Now()
+
 	fmt.Println(greatestProd())
+
+	elapsed := time.Since(start)
+  fmt.Printf("Time elapsed: %s", elapsed)
 }

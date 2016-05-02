@@ -12,6 +12,7 @@ package main
 
 import (
   "fmt"
+  "time"
 )
 
 func sumSqu() int {
@@ -38,5 +39,10 @@ func sumSquDiff() int {
 }
 
 func main() {
+  start := time.Now()
+
   fmt.Println(sumSquDiff())
+
+  elapsed := time.Since(start)
+  fmt.Printf("Time elapsed: %s", elapsed)
 }

@@ -9,6 +9,7 @@ package main
 
 import (
     "fmt"
+    "time"
 )
 
 func smallest() (n int) {
@@ -28,5 +29,10 @@ func smallest() (n int) {
 }
 
 func main() {
+  start := time.Now()
+
   fmt.Println(smallest())
+
+  elapsed := time.Since(start)
+  fmt.Printf("Time elapsed: %s", elapsed)
 }

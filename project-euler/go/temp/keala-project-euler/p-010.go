@@ -6,6 +6,7 @@ package main
 
 import (
 	"fmt"
+	"time"
 )
 
 func primesBelowTwoMillion() int {
@@ -31,5 +32,10 @@ func isPrime(n int) bool {
 }
 
 func main() {
+	start := time.Now()
+
 	fmt.Println(primesBelowTwoMillion())
+
+	elapsed := time.Since(start)
+  fmt.Printf("Time elapsed: %s", elapsed)
 }

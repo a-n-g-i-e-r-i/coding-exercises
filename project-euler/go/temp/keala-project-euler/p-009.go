@@ -10,6 +10,7 @@ package main
 
 import (
   "fmt"
+  "time"
 )
 
 func abc() (p int) {
@@ -22,7 +23,7 @@ func abc() (p int) {
         if a * a + b * b == c * c && a + b + c == s {
           p = a * b * c
           return p
-        } 
+        }
       }
     }
   }
@@ -30,5 +31,10 @@ func abc() (p int) {
 }
 
 func main() {
+  start := time.Now()
+
   fmt.Println(abc())
+
+  elapsed := time.Since(start)
+  fmt.Printf("Time elapsed: %s", elapsed)
 }

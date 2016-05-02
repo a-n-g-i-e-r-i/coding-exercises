@@ -6,6 +6,7 @@ package main
 
 import(
   "fmt"
+  "time"
 )
 
 func prime() int {
@@ -27,7 +28,7 @@ func isPrime(n int) bool {
   var d int = 2
   for n > d {
     if n % d == 0 {
-      return false 
+      return false
     } else {
       d++
     }
@@ -36,5 +37,10 @@ func isPrime(n int) bool {
 }
 
 func main() {
+  start := time.Now()
+
   fmt.Println(prime())
+
+  elapsed := time.Since(start)
+  fmt.Printf("Time elapsed: %s", elapsed)
 }
