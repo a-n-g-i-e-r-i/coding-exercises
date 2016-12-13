@@ -1,4 +1,5 @@
 # ignore DS_Store
 /.DS_Store
 /project-euler.DS_Store
-/algorithms-design-analysis.DS_Store
+/algorithms-design-and-analysis.DS_Store
+.DS_Store
