@@ -7,3 +7,9 @@ def large_power(b, e):
   return False
 
 large_power(10, 2)
+
+# should print True
+print(large_power(2, 13))
+
+# should print False
+print(large_power(2, 12))
