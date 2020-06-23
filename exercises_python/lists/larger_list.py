@@ -5,3 +5,5 @@
 def larger_list(lst1, lst2):
   return lst2[-1] if len(lst2) > len(lst1) else lst1[-1]
 
+# Should print 5
+print(larger_list([4, 10, 2, 5], [-10, 2, 5, 10]))
